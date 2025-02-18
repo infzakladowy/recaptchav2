@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>reCAPTCHA v2 Demo</title>
+    <!-- reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <h1>Number Verification</h1>
+    
+    <!-- Simple form with number input -->
+    <form method="POST" action="/submit">
+        <!-- Number input (digits only) -->
+        <label for="number">Enter number:</label>
+        <input type="number" 
+               id="number" 
+               name="number" 
+               required
+               min="0"
+               pattern="\d+">
+        
+        <!-- reCAPTCHA widget -->
+        <div class="g-recaptcha"
+             data-sitekey="6LdhUNsqAAAAAE3EhoR0E3AOn0nU3oaL2LyzqsVm"></div>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
